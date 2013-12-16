@@ -15,28 +15,30 @@ html {
   font-size: 100%;
   position: relative;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 300;
-}
 h1 {
   font-size: 48px;
   font-size: 3rem;
+  font-weight: 300;
 }
 h2 {
   font-size: 32px;
   font-size: 2rem;
+  font-weight: 300;
 }
 h3 {
   font-size: 24px;
   font-size: 1.5rem;
+  font-weight: 300;
 }
 h4 {
   font-size: 20px;
   font-size: 1.25rem;
+  font-weight: 300;
+}
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 a {
   color: #660ac7;
@@ -102,22 +104,6 @@ body footer {
   left: 0;
   bottom: 0;
 }
-.wrapper {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 800px) {
-  body header.site-head {
-    padding: 50px 20px;
-  }
-  body article.main-article {
-    padding: 20px;
-  }
-  body footer {
-    padding: 50px 20px;
-  }
-}
 /* ==========================================================================
    Input fields and Buttons
    ========================================================================== */
@@ -161,8 +147,27 @@ input:-ms-input-placeholder {
   color: #CFBEE2;
 }
 /* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media screen and (max-width: 800px) {
+  body header.site-head {
+    padding: 50px 20px;
+  }
+  body article.main-article {
+    padding: 20px;
+  }
+  body footer {
+    padding: 50px 20px;
+  }
+}
+/* ==========================================================================
    Helper classes
    ========================================================================== */
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
 .ir {
   background-color: transparent;
   border: 0;
@@ -222,6 +227,9 @@ input:-ms-input-placeholder {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
+  }
+  header.site-head {
+    display: none;
   }
   a,
   a:visited {

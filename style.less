@@ -10,21 +10,26 @@ html {
     position: relative;
 } 
 
-h1,h2,h3,h4,h5 {
-    font-weight: 300;
-}
-
 h1   {
 	font-size: 48px; font-size: 3rem;
+    font-weight: 300;
 }
 h2 {
     font-size: 32px; font-size: 2rem;
+    font-weight: 300;
 }
 h3 {
     font-size: 24px; font-size: 1.5rem;
+    font-weight: 300;
 }
 h4 {
     font-size: 20px; font-size: 1.25rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 16px; font-size: 1rem;
+    font-weight: 600;
 }
 
 a {
@@ -90,27 +95,6 @@ body {
 	}
 }
 
-.wrapper {
-	max-width: @wrapper-width;
-	width: 100%;
-	margin: 0 auto;
-}
-
-@media screen and (max-width: @wrapper-width){
-	body {
-		header.site-head {
-			padding: 50px 20px;
-		}
-		article.main-article {
-			padding: 20px;
-		}
-		
-		footer {
-			padding: 50px 20px;
-		}
-	}
-}
-
 /* ==========================================================================
    Input fields and Buttons
    ========================================================================== */
@@ -149,8 +133,33 @@ input {
 }
 
 /* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media screen and (max-width: @wrapper-width){
+	body {
+		header.site-head {
+			padding: 50px 20px;
+		}
+		article.main-article {
+			padding: 20px;
+		}
+		
+		footer {
+			padding: 50px 20px;
+		}
+	}
+}
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
+
+.wrapper {
+	max-width: @wrapper-width;
+	width: 100%;
+	margin: 0 auto;
+}
 
 .ir {
     background-color: transparent;
@@ -220,6 +229,10 @@ input {
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
+    }
+    
+    header.site-head {
+        display: none;
     }
 
     a,
