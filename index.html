@@ -24,22 +24,27 @@
 				<nav id="site-nav">
 				    <ul>
 				        <li><a href="#">Link 1</a></li>
-				        <li><a href="#">Link 2</a></li>
+				        <li><a href="#">Link 2</a>
+				            <ul class="children">
+                                <li class=""><a href="#">Sublink 1</a></li>
+                                <li class=""><a href="#">Sublink 2</a></li>
+                            </ul>
+                        </li>
 				        <li><a href="#">Link 3</a></li>
 				        <li><a href="#">Link 4</a></li>
 				        <li><a href="#">Link 5</a></li>
+                        <li>
+                            <a href="#">Link 6</a>
+                            <ul class="children">
+                                <li class=""><a href="#">Sublink 1</a></li>
+                                <li class=""><a href="#">Sublink 2</a></li>
+                            </ul>
+                        </li>
 				    </ul>
-				    <li>
-				        <a href="#">Link 6</a>
-				        <ul class="children">
-				            <li class=""><a href="#">Sublink 1</a></li>
-				            <li class=""><a href="#">Sublink 2</a></li>
-				        </ul>
-				    </li>
 				</nav>
 			</section><!-- .wrapper -->
 		</header>
-		<section id="main-content" class="wrapper">
+		<section id="main-content" class="wrapper" style="padding-bottom:122px;">
 			<article class="main-article">
 				<h1>Welcome to Ghost</h1><p>You're in! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. Go ahead and edit this post to get going and learn how it all works!</p>
                 
@@ -102,7 +107,11 @@
                 
                 <p>There's one fantastic secret about Markdown. If you want, you can  write plain old HTML and it'll still work! Very flexible.</p>
                 
-                <p><input type="text" placeholder="I'm an input field!"></p>
+                <section class="input-group">
+                    <input type="text" placeholder="Name">
+                    
+                    <input type="email" placeholder="email@example.com">
+                </section>
                 
                 <p>That should be enough to get you started. Have fun - and let us know what you think :)</p>
 			</article>

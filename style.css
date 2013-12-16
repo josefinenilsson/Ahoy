@@ -146,6 +146,9 @@ input:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #CFBEE2;
 }
+section.input-group input:first-child {
+  border-bottom: 0;
+}
 /* ==========================================================================
    Responsive
    ========================================================================== */
