@@ -1,6 +1,6 @@
 @import "elements.less";
 @import "formatting.less";
-@wrapper-width: 1200px;
+@wrapper-width: 1000px;
 @background-color: #383838;
 @dark-color: #572b85;
 @link-color: #660AC7;
@@ -41,6 +41,7 @@ body {
     section.content {
         background: @dark-color;
         section.featured-image {
+            overflow: hidden;
             position: relative;
             img {
                 display: block;
@@ -59,7 +60,7 @@ body {
                 text-align: center;
                 top: 45%;
                 left: 0;
-                width: 100%;
+                max-width: 100%;
                 box-sizing: border-box;
                 padding: 0 10%;
             }
@@ -81,7 +82,7 @@ body {
         article.main {
             background: white;
             box-sizing: border-box;
-            padding: 80px 140px;
+            padding: 10%;
             h1:first-child {
                 margin-top: 0;
                 text-align: center;

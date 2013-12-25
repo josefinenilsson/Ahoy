@@ -129,7 +129,7 @@ body header.site-head {
   padding: 40px 0;
 }
 body header.site-head section.wrapper span.site-title {
-  max-width: 1200px;
+  max-width: 1000px;
   display: block;
   margin: 0 auto;
   font-size: 32px;
@@ -140,6 +140,7 @@ body section.content {
   background: #572b85;
 }
 body section.content section.featured-image {
+  overflow: hidden;
   position: relative;
 }
 body section.content section.featured-image img {
@@ -160,7 +161,7 @@ body section.content section.featured-image span.caption {
   text-align: center;
   top: 45%;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 0 10%;
 }
@@ -179,7 +180,7 @@ body section.content section.featured-image:hover span.attribution {
 body section.content article.main {
   background: white;
   box-sizing: border-box;
-  padding: 80px 140px;
+  padding: 10%;
 }
 body section.content article.main h1:first-child {
   margin-top: 0;
@@ -209,7 +210,7 @@ body footer section.wrapper {
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   body header.site-head {
     padding: 0;
   }
@@ -224,7 +225,7 @@ body footer section.wrapper {
    Helper classes
    ========================================================================== */
 .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
