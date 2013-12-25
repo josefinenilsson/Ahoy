@@ -10,11 +10,6 @@ License URI: http://opensource.org/licenses/MIT
 Tags: purple, white, one-column, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, microformats, post-formats
 Text Domain: Ahoy
 */
-html {
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  position: relative;
-}
 h1 {
   font-size: 48px;
   font-size: 3rem;
@@ -44,65 +39,30 @@ a {
   color: #660ac7;
   text-decoration: none;
   font-weight: 500;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
 }
 a:hover {
-  border-bottom: 1px solid #660ac7;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  text-decoration: underline;
+}
+p {
+  margin-bottom: 20px;
 }
 blockquote {
-  border-left: 3px solid #E3DCEC;
+  border-left: 3px solid #e3dcec;
   padding: 0 0 0 16px;
   margin: 0 0 30px;
 }
+q {
+  font-size: 24 px;
+  font-size: 1.5rem;
+  font-style: italic;
+  clear: both;
+  font-weight: 500;
+}
 hr {
-  color: #E3DCEC;
-  background-color: #E3DCEC;
+  color: #e3dcec;
+  background-color: #e3dcec;
   height: 3px;
   border: none;
-}
-/* ==========================================================================
-   Body
-   ========================================================================== */
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-size: 1rem;
-}
-body header.site-head {
-  background: #572b85;
-  padding: 50px 0;
-}
-body header.site-head span.site-title {
-  font-size: 20px;
-  font-size: 1.25rem;
-  color: #ffffff;
-}
-body article.main-article {
-  padding: 20px 0;
-}
-body article.main-article img {
-  width: 100%;
-}
-body footer {
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #572b85;
-  padding: 50px 0;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 /* ==========================================================================
    Input fields and Buttons
@@ -149,12 +109,109 @@ input:-ms-input-placeholder {
 section.input-group input:first-child {
   border-bottom: 0;
 }
+html {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  position: relative;
+}
+/* ==========================================================================
+   Body
+   ========================================================================== */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #383838;
+}
+body header.site-head {
+  padding: 40px 0;
+}
+body header.site-head section.wrapper span.site-title {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  font-size: 32px;
+  font-size: 2rem;
+  color: #ffffff;
+}
+body section.content {
+  background: #572b85;
+}
+body section.content section.featured-image {
+  position: relative;
+}
+body section.content section.featured-image img {
+  display: block;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  opacity: 0.3;
+  width: 100%;
+  height: auto;
+}
+body section.content section.featured-image span.caption {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+body section.content section.featured-image span.attribution {
+  opacity: 0;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  transition: 500ms;
+  padding: 5px;
+  background: white;
+}
+body section.content section.featured-image:hover span.attribution {
+  opacity: 1;
+}
+body section.content article.main {
+  background: white;
+  box-sizing: border-box;
+  padding: 80px 140px;
+}
+body section.content article.main h1:first-child {
+  margin-top: 0;
+  text-align: center;
+}
+body section.content article.main img {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+}
+body section.content article.main p:last-child,
+body section.content article.main blockquote:last-child {
+  margin-bottom: 0;
+}
+body footer {
+  margin: 20px 0;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+body footer section.wrapper {
+  background: #572b85;
+  padding: 50px 0;
+}
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   body header.site-head {
-    padding: 50px 20px;
+    padding: 0;
   }
   body article.main-article {
     padding: 20px;
@@ -167,7 +224,7 @@ section.input-group input:first-child {
    Helper classes
    ========================================================================== */
 .wrapper {
-  max-width: 800px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -280,6 +337,12 @@ section.input-group input:first-child {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
   }
 }
 
