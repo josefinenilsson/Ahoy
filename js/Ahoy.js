@@ -7,8 +7,7 @@ function captionPosition() {
 }
 
 $("#featured-image").load(function() {
-    captionPosition();
-    
+    captionPosition();   
 });
 
 
