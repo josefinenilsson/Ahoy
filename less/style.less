@@ -1,6 +1,8 @@
 @import "elements.less";
 @import "formatting.less";
-@wrapper-width: 1000px;
+@desktop-size: 1000px;
+@tablet-size: 800px;
+@mobile-size: 600px;
 @background-color: #383838;
 @dark-color: #572b85;
 @link-color: #660AC7;
@@ -27,7 +29,7 @@ body {
 		padding: 40px 0;
 		section.wrapper {
             span.site-title {
-                max-width: @wrapper-width;
+                max-width: @desktop-size;
                 display: block;
                 margin: 0 auto;
                 font-size: 32px; font-size: 2rem;
@@ -117,20 +119,68 @@ body {
    Responsive
    ========================================================================== */
 
-@media screen and (max-width: @wrapper-width){
+@media screen and (max-width: @desktop-size){
 	body {
 		header.site-head {
 			padding: 0;
 		}
-		article.main-article {
-			padding: 20px;
-		}
-		
 		footer {
 			padding: 50px 20px;
 		}
 	}
 }
+@media screen and (max-width: @tablet-size){
+    h1 {
+        font-size: 38px;
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+    
+	body {  
+		header.site-head {
+			padding: 0;
+		}
+        section.container {
+        background: @dark-color;
+        article.main {
+            section.featured-image {  
+                q.caption {
+                    font-size: 24px; font-size: 1.5rem;
+                    font-weight: 700;
+                    }
+                }
+            }
+        }
+		footer {
+			padding: 50px 20px;
+		}
+	}
+}
+
+@media screen and (max-width: @mobile-size){
+    h1 {
+        font-size: 32px;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+	body {
+		header.site-head {
+			padding: 0;
+		}
+        article.main {
+            section.featured-image {  
+                q.caption {
+                    font-size: 16px; font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+		footer {
+			padding: 50px 20px;
+		}
+	}
+}
+
 @import "helper.less";
 @import "code.less";
 @import "print.less";
