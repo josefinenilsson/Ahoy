@@ -280,6 +280,7 @@ html {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
   font-size: 100%;
   position: relative;
+  overflow-y: scroll;
 }
 /* ==========================================================================
    Body
@@ -318,6 +319,10 @@ body section.container article.main section.featured-image img {
   opacity: 0.3;
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 body section.container article.main section.featured-image q.caption {
   font-size: 32px;
@@ -334,18 +339,39 @@ body section.container article.main section.featured-image q.caption {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 5%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
 }
 body section.container article.main section.featured-image span.attribution {
+  font-size: 12px;
+  font-size: 0.75rem;
   opacity: 0;
   position: absolute;
   bottom: 3px;
   right: 0;
-  transition: 500ms;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   padding: 5px;
   background: white;
 }
+body section.container article.main section.featured-image.touched span.attribution,
 body section.container article.main section.featured-image:hover span.attribution {
   opacity: 1;
+}
+body section.container article.main section.featured-image.touched img,
+body section.container article.main section.featured-image:hover img {
+  filter: none;
+  -webkit-filter: none;
+  opacity: 1;
+}
+body section.container article.main section.featured-image.touched q.caption,
+body section.container article.main section.featured-image:hover q.caption {
+  opacity: 0;
 }
 body section.container article.main section.content {
   background: white;

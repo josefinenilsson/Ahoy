@@ -7,12 +7,13 @@ function captionPosition() {
 }
 
 $("#featured-image").load(function() {
-    captionPosition();   
+    captionPosition();
+    $(window).resize(function() {
+        captionPosition();
+    });
 });
 
 
-$(window).resize(function() {
-	captionPosition();
-});
+
 
     
