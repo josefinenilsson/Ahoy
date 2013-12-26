@@ -140,7 +140,6 @@ body section.container {
   background: #572b85;
 }
 body section.container article.main section.featured-image {
-  overflow: hidden;
   position: relative;
 }
 body section.container article.main section.featured-image img {
@@ -152,7 +151,7 @@ body section.container article.main section.featured-image img {
   width: 100%;
   height: auto;
 }
-body section.container article.main section.featured-image span.caption {
+body section.container article.main section.featured-image q.caption {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 700;
