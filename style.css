@@ -136,14 +136,14 @@ body header.site-head section.wrapper span.site-title {
   font-size: 2rem;
   color: #ffffff;
 }
-body section.content {
+body section.container {
   background: #572b85;
 }
-body section.content section.featured-image {
+body section.container article.main section.featured-image {
   overflow: hidden;
   position: relative;
 }
-body section.content section.featured-image img {
+body section.container article.main section.featured-image img {
   display: block;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   filter: gray;
@@ -152,7 +152,7 @@ body section.content section.featured-image img {
   width: 100%;
   height: auto;
 }
-body section.content section.featured-image span.caption {
+body section.container article.main section.featured-image span.caption {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 700;
@@ -165,7 +165,7 @@ body section.content section.featured-image span.caption {
   box-sizing: border-box;
   padding: 0 10%;
 }
-body section.content section.featured-image span.attribution {
+body section.container article.main section.featured-image span.attribution {
   opacity: 0;
   position: absolute;
   bottom: 3px;
@@ -174,25 +174,25 @@ body section.content section.featured-image span.attribution {
   padding: 5px;
   background: white;
 }
-body section.content section.featured-image:hover span.attribution {
+body section.container article.main section.featured-image:hover span.attribution {
   opacity: 1;
 }
-body section.content article.main {
+body section.container article.main section.content {
   background: white;
   box-sizing: border-box;
   padding: 10%;
 }
-body section.content article.main h1:first-child {
+body section.container article.main section.content h1:first-child {
   margin-top: 0;
   text-align: center;
 }
-body section.content article.main img {
+body section.container article.main section.content img {
   width: 100%;
   height: auto;
   padding: 20px 0;
 }
-body section.content article.main p:last-child,
-body section.content article.main blockquote:last-child {
+body section.container article.main section.content p:last-child,
+body section.container article.main section.content blockquote:last-child {
   margin-bottom: 0;
 }
 body footer {

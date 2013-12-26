@@ -38,64 +38,66 @@ body {
             
         }
 	}
-    section.content {
+    section.container {
         background: @dark-color;
-        section.featured-image {
-            overflow: hidden;
-            position: relative;
-            img {
-                display: block;
-                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-                filter: gray;
-                -webkit-filter: grayscale(100%);
-                opacity: 0.3;
-                width: 100%;
-                height: auto;
-            }    
-            span.caption {
-                font-size: 32px; font-size: 2rem;
-                font-weight: 700;
-                color: white;
-                position: absolute;
-                text-align: center;
-                top: 45%;
-                left: 0;
-                max-width: 100%;
-                box-sizing: border-box;
-                padding: 0 10%;
-            }
-            span.attribution {
-                opacity: 0;
-                position: absolute;
-                bottom: 3px;
-                right: 0;
-                transition: 500ms;
-                padding: 5px;
-                background: white;
-            }
-            &:hover {
+        article.main {
+            section.featured-image {
+                overflow: hidden;
+                position: relative;
+                img {
+                    display: block;
+                    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                    filter: gray;
+                    -webkit-filter: grayscale(100%);
+                    opacity: 0.3;
+                    width: 100%;
+                    height: auto;
+                }    
+                span.caption {
+                    font-size: 32px; font-size: 2rem;
+                    font-weight: 700;
+                    color: white;
+                    position: absolute;
+                    text-align: center;
+                    top: 45%;
+                    left: 0;
+                    max-width: 100%;
+                    box-sizing: border-box;
+                    padding: 0 10%;
+                }
                 span.attribution {
-                    opacity: 1;
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 3px;
+                    right: 0;
+                    transition: 500ms;
+                    padding: 5px;
+                    background: white;
+                }
+                &:hover {
+                    span.attribution {
+                        opacity: 1;
+                    }
+                }
+            }
+            section.content {
+                background: white;
+                box-sizing: border-box;
+                padding: 10%;
+                h1:first-child {
+                    margin-top: 0;
+                    text-align: center;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    padding: 20px 0;
+                }
+                p:last-child, blockquote:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
-        article.main {
-            background: white;
-            box-sizing: border-box;
-            padding: 10%;
-            h1:first-child {
-                margin-top: 0;
-                text-align: center;
-            }
-            img {
-                width: 100%;
-                height: auto;
-                padding: 20px 0;
-            }
-            p:last-child, blockquote:last-child {
-                margin-bottom: 0;
-            }
-	    }
     }
 	
 	footer {
