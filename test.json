@@ -1,0 +1,85 @@
+pkg: grunt.file.readJSON('package.json'),
+
+        //  ######################
+        //       Compile CSS
+        //  ######################
+        less: {
+            development: {
+                options: {
+                    paths: ["assets/css"]
+                },
+                files: {
+                    "style.css": "stylesheetstyle.less"
+                }
+            },
+              production: {
+                options: {
+                    paths: ["assets/css"],
+                    cleancss: true
+                },
+                files: {
+                    "style.css": "style.less"
+                }
+              }
+        },
+        
+        //  ######################
+        //        Combine files
+        //  ######################
+        concat: {
+            development: {
+                src: [
+                    'stylesheet/themeinfo.css',
+                    'style.css'
+                ],
+                dest: 'style.css'
+            },
+            production: {
+                src: [
+                    'stylesheet/themeinfo.css',
+                    'style.css'
+                ],
+                dest: 'style.css'
+            }
+        },
+        //  ######################
+        //        Minify CSS
+        //  ######################        
+        cssmin: {
+              combine: {
+                files: {
+                      'style.css': 'style.css', 'code.css'
+                }
+              }
+        },
+        //  ######################
+        //        LiveReload and Watch
+        //  ######################  
+        watch: {
+            css: {
+                files: ['style.css'],
+                tasks: [],
+                options: {
+                    livereload: true,
+                }
+            },
+            less: {
+                files: ['stylesheet/*.less'],
+                tasks: ['less:development', 'concat:development'],
+                options: {
+                    livereload: false,
+                },
+            },
+            js: {
+                files: 'js.less',
+                options: {
+                    livereload: true,
+                }
+            },
+            html: {
+                files: '*.html',
+                options: {
+                    livereload: true,
+                }
+            }
+        }
