@@ -350,7 +350,6 @@ body header.site-head section.wrapper div.site-title a span.logo .flag path {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  fill: black;
 }
 body header.site-head section.wrapper div.site-title a span.site-name {
   vertical-align: top;
