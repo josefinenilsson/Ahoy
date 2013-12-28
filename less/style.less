@@ -36,6 +36,7 @@ body {
         .transition(0.3s, @ease:ease-out);
         display: block;
 		section.wrapper {
+            position: relative;
             div.site-title {
                 float: left;
                 margin: 0 auto;
@@ -87,7 +88,8 @@ body {
             }
             nav.site-navigation {
                 height: 60px;
-                float: right;
+                position: absolute;
+                right: 0;
                 ul {
                     .list-reset;
                     li {
@@ -171,7 +173,7 @@ body {
             section.content {
                 background: white;
                 .box-sizing;
-                padding: 5%;
+                padding: 30px; padding: 3rem;
                 h1:first-child {
                     margin-top: 0;
                     text-align: center;
@@ -189,14 +191,30 @@ body {
     }
 	
 	footer {
-        margin: 20px 0;
+        display: block;
+        margin: 30px 0;
+        width: 100%;      
         section.wrapper {
+            display: block;
+            padding: 30px; padding: 3em;
             background: @dark-background-color;
-            padding: 50px 0;
+            .box-sizing;
+            aside.widget {
+                color: white;
+                width: 48%;
+                margin-right: 4%;
+                display: inline-block;
+                vertical-align: top;
+                .box-sizing;
+                h3.widget-title {
+                    color: white;
+                    margin: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
-        .box-sizing;
-
-        width: 100%;
 	}
 }
 
@@ -212,7 +230,7 @@ body {
 			padding: 20px 0;
 		}
 		footer {
-			padding: 40px 0;
+			margin: 2.5% 0;
 		}
 	}
 }
@@ -222,8 +240,20 @@ body {
         font-size: 4.2rem;
         font-weight: 300;
     }
+
     
-	body {  
+	body {
+        header.site-head {
+            section.wrapper {
+                div.site-title {
+                    a {
+                        span.site-name{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
         section.container {
         background: @dark-color;
         article.main {
@@ -234,9 +264,6 @@ body {
                 }
             }
         }
-		footer {
-			padding: 50px 20px;
-		}
 	}
 }
 
@@ -254,9 +281,6 @@ body {
                 }
             }
         }
-		footer {
-			padding: 50px 20px;
-		}
 	}
 }
 @import "print.less";
