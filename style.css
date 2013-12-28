@@ -54,7 +54,7 @@ p {
   margin-bottom: 20px;
 }
 blockquote {
-  border-left: 3px solid #e3dcec;
+  border-left: 3px solid #ebebeb;
   padding: 0 0 0 16px;
   margin: 0 0 30px;
 }
@@ -66,8 +66,8 @@ q {
   font-weight: 500;
 }
 hr {
-  color: #e3dcec;
-  background-color: #e3dcec;
+  color: #ebebeb;
+  background-color: #ebebeb;
   height: 3px;
   border: none;
 }
@@ -505,6 +505,20 @@ body section.container article.main section.content p:last-child,
 body section.container article.main section.content blockquote:last-child {
   margin-bottom: 0;
 }
+body section.container article.main section.comments {
+  background: white;
+}
+body section.container article.main section.comments div.toggle-comments {
+  height: 100px;
+  background: #ebebeb;
+  cursor: pointer;
+}
+body section.container article.main section.comments div.toggle-comments span {
+  display: block;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+}
 body footer {
   display: block;
   margin: 30px 0;
@@ -564,6 +578,24 @@ body footer section.wrapper aside.widget:last-child {
   body section.container article.main section.featured-image q.caption {
     font-size: 24px;
     font-size: 2.4rem;
+  }
+  body footer section.wrapper aside.widget {
+    color: white;
+    width: 100%;
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: top;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body footer section.wrapper aside.widget h3.widget-title {
+    color: white;
+    margin: 0;
+  }
+  body footer section.wrapper aside.widget:last-child {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 600px) {

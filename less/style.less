@@ -9,7 +9,7 @@
 @dark-background-color: #2E2E2E;
 @dark-color: #572b85;
 @link-color: #660AC7;
-@light-color: #E3DCEC;
+@light-color: #EBEBEB;
 @site-color: #fff;
 
 html {
@@ -187,6 +187,21 @@ body {
                     margin-bottom: 0;
                 }
             }
+            section.comments {
+                background: white;
+                div.toggle-comments {
+                    height: 100px;
+                    background: @light-color;
+                    cursor: pointer;
+                    span {
+                        display: block;
+                        line-height: 100px;
+                        width: 100%;
+                        text-align: center;
+                        
+                    }
+                }
+            }
         }
     }
 	
@@ -260,6 +275,25 @@ body {
             section.featured-image {  
                 q.caption {
                     font-size: 24px; font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+        footer {
+            section.wrapper {
+                aside.widget {
+                    color: white;
+                    width: 100%;
+                    margin-right: 0;
+                    display: inline-block;
+                    vertical-align: top;
+                    .box-sizing;
+                    h3.widget-title {
+                        color: white;
+                        margin: 0;
+                    }
+                    &:last-child {
+                        margin-top: 20px;
                     }
                 }
             }
