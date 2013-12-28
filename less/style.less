@@ -1,4 +1,4 @@
-@import "elements.less";
+@import "mixins.less";
 @import "formatting.less";
 @import "helper.less";
 @import "code.less";
@@ -6,6 +6,7 @@
 @tablet-size: 800px;
 @mobile-size: 600px;
 @background-color: #383838;
+@dark-background-color: #2E2E2E;
 @dark-color: #572b85;
 @link-color: #660AC7;
 @light-color: #E3DCEC;
@@ -13,7 +14,7 @@
 
 html {
     font-family: Open Sans, Helvetica, Arial, sans-serif;
-	font-size: 100%;
+	font-size: 62.5%;
     position: relative;
     overflow-y: scroll;
 } 
@@ -26,22 +27,93 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-	font-size: 16px; font-size: 1rem;
+	font-size: 16px; font-size: 1.6rem;
     background: @background-color;
 	header.site-head {
-		padding: 40px 0;
+        overflow: hidden;
+		padding: 30px 0;
+        height: 60px;
+        .transition(0.3s, @ease:ease-out);
+        display: block;
 		section.wrapper {
-            span.site-title {
-                max-width: @desktop-size;
-                display: block;
+            div.site-title {
+                float: left;
                 margin: 0 auto;
-                font-size: 32px; font-size: 2rem;
-                color: @site-color;
-                text-transform: uppercase;
+                a {
+                    span.logo{
+                        .transition;
+                        width: 60px;
+                        height: 60px;
+                        display: inline-block;
+                        background: white;
+                        margin-right: -4px;
+                        .flag {
+                            margin: 0 5%;
+                            width: 90%;
+                            height: auto;
+                            path {
+                                .transition;
+                                fill: black;
+                            }
+                        }
+                    }
+                    span.site-name{
+                        vertical-align: top;
+                        display: inline-block;
+                        color: white;
+                        text-transform: uppercase;
+                        font-size: 32px;
+                        font-size: 3.2rem;
+                        line-height: 60px;
+                        padding: 0 10px;
+                        .transition;
+                    }
+                    display: inline-block;
+                    .transition;
+                    &:hover {
+                        text-decoration: none;
+                        span.site-name {
+                            color: @dark-color;
+                            background: white;
+                        }
+                        span.logo{
+                            .flag {
+                                path {
+                                    fill: @dark-color;
+                                }
+                            }
+                        }
+                    }
+                }             
             }
-        }
-        nav#site-menu {
-            
+            nav.site-navigation {
+                height: 60px;
+                float: right;
+                ul {
+                    .list-reset;
+                    li {
+                        display: inline-block;
+                        margin: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        a {
+                            font-size: 20px; font-size: 2rem;
+                            font-weight: 300;
+                            line-height: 40px;
+                            color: white;
+                            padding: 10px;
+                            text-transform: lowercase;
+                            background: @dark-background-color;
+                            .transition;
+                            &:hover {
+                                text-decoration: none;
+                                background: @dark-color;
+                            }
+                        }
+                    }
+                }
+            }
         }
 	}
     section.container {
@@ -60,21 +132,21 @@ body {
                     .transition(0.3s, @ease:ease-out);
                 }    
                 q.caption {
-                    font-size: 32px; font-size: 2rem;
+                    font-size: 32px; font-size: 3.2rem;
                     font-weight: 700;
                     color: white;
                     position: absolute;
                     text-align: center;
-                    top: 45%;
+                    top: 50%;
                     left: 0;
                     max-width: 100%;
                     .box-sizing;
                     padding: 0 5%;
-                    .transition(0.3s, @ease:ease-out);
+                    .opacity-transition(0.3s, @ease:ease-out);
                     pointer-events: none;
                 }
                 span.attribution {
-                    font-size: 12px; font-size: 0.75rem;
+                    font-size: 12px; font-size: 1.2rem;
                     opacity: 0;
                     position: absolute;
                     bottom: 3px;
@@ -120,7 +192,7 @@ body {
 	footer {
         margin: 20px 0;
         section.wrapper {
-            background: @dark-color;
+            background: @dark-background-color;
             padding: 50px 0;
         }
         .box-sizing;
@@ -138,30 +210,27 @@ body {
 @media screen and (max-width: @desktop-size){
 	body {
 		header.site-head {
-			padding: 0;
+			padding: 20px 0;
 		}
 		footer {
-			padding: 50px 20px;
+			padding: 40px 0;
 		}
 	}
 }
 @media screen and (max-width: @tablet-size){
     h1 {
-        font-size: 38px;
-        font-size: 2.5rem;
+        font-size: 42px;
+        font-size: 4.2rem;
         font-weight: 300;
     }
     
 	body {  
-		header.site-head {
-			padding: 0;
-		}
         section.container {
         background: @dark-color;
         article.main {
             section.featured-image {  
                 q.caption {
-                    font-size: 24px; font-size: 1.5rem;
+                    font-size: 24px; font-size: 2.4rem;
                     }
                 }
             }
@@ -174,18 +243,15 @@ body {
 
 @media screen and (max-width: @mobile-size){
     h1 {
-        font-size: 32px;
-        font-size: 2rem;
+        font-size: 36px;
+        font-size: 3.6rem;
         font-weight: 300;
     }
 	body {
-		header.site-head {
-			padding: 0;
-		}
         article.main {
             section.featured-image {  
                 q.caption {
-                    font-size: 16px !important; font-size: 1rem !important;
+                    font-size: 16px !important; font-size: 1.6rem;
                 }
             }
         }

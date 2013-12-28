@@ -63,6 +63,13 @@
   border-top-left-radius: @topleft;
   .background-clip(padding-box);
 }
+.list-reset {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
 .opacity(@opacity: 0.5) {
   -moz-opacity: @opacity;
   -khtml-opacity: @opacity;
@@ -96,6 +103,12 @@
   -moz-transition: all @duration @ease;
   -o-transition: all @duration @ease;
   transition: all @duration @ease;
+}
+.opacity-transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: opacity @duration @ease;
+  -moz-transition: opacity @duration @ease;
+  -o-transition: opacity @duration @ease;
+  transition: opacity @duration @ease;
 }
 .inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
   -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);

@@ -10,29 +10,36 @@ License URI: http://opensource.org/licenses/MIT
 Tags: purple, white, one-column, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, microformats, post-formats
 Text Domain: Ahoy
 */
+.list-reset {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
 h1 {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 4.8rem;
   font-weight: 300;
 }
 h2 {
   font-size: 32px;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3.2rem;
+  font-weight: 400;
 }
 h3 {
   font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 h4 {
   font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 400;
 }
 h5 {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 a {
@@ -63,6 +70,14 @@ hr {
   background-color: #e3dcec;
   height: 3px;
   border: none;
+}
+::selection {
+  background: #572b85;
+  color: white;
+}
+::-moz-selection {
+  background: #572b85;
+  color: white;
 }
 /* ==========================================================================
    Input fields and Buttons
@@ -114,7 +129,7 @@ section.input-group input:first-child {
    ========================================================================== */
 .wrapper {
   max-width: 1000px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 .ir {
@@ -278,7 +293,7 @@ pre .cdata {
 }
 html {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 62.5%;
   position: relative;
   overflow-y: scroll;
 }
@@ -290,20 +305,112 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   background: #383838;
 }
 body header.site-head {
-  padding: 40px 0;
-}
-body header.site-head section.wrapper span.site-title {
-  max-width: 1000px;
+  overflow: hidden;
+  padding: 30px 0;
+  height: 60px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   display: block;
+}
+body header.site-head section.wrapper div.site-title {
+  float: left;
   margin: 0 auto;
-  font-size: 32px;
-  font-size: 2rem;
-  color: #ffffff;
+}
+body header.site-head section.wrapper div.site-title a {
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body header.site-head section.wrapper div.site-title a span.logo {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: white;
+  margin-right: -4px;
+}
+body header.site-head section.wrapper div.site-title a span.logo .flag {
+  margin: 0 5%;
+  width: 90%;
+  height: auto;
+}
+body header.site-head section.wrapper div.site-title a span.logo .flag path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: black;
+}
+body header.site-head section.wrapper div.site-title a span.site-name {
+  vertical-align: top;
+  display: inline-block;
+  color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 60px;
+  padding: 0 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body header.site-head section.wrapper div.site-title a:hover {
+  text-decoration: none;
+}
+body header.site-head section.wrapper div.site-title a:hover span.site-name {
+  color: #572b85;
+  background: white;
+}
+body header.site-head section.wrapper div.site-title a:hover span.logo .flag path {
+  fill: #572b85;
+}
+body header.site-head section.wrapper nav.site-navigation {
+  height: 60px;
+  float: right;
+}
+body header.site-head section.wrapper nav.site-navigation ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+body header.site-head section.wrapper nav.site-navigation ul li {
+  display: inline-block;
+  margin: 10px;
+}
+body header.site-head section.wrapper nav.site-navigation ul li:last-child {
+  margin-right: 0;
+}
+body header.site-head section.wrapper nav.site-navigation ul li a {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 40px;
+  color: white;
+  padding: 10px;
+  text-transform: lowercase;
+  background: #2e2e2e;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body header.site-head section.wrapper nav.site-navigation ul li a:hover {
+  text-decoration: none;
+  background: #572b85;
 }
 body section.container {
   background: #572b85;
@@ -326,12 +433,12 @@ body section.container article.main section.featured-image img {
 }
 body section.container article.main section.featured-image q.caption {
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: white;
   position: absolute;
   text-align: center;
-  top: 45%;
+  top: 50%;
   left: 0;
   max-width: 100%;
   -ms-box-sizing: border-box;
@@ -339,15 +446,15 @@ body section.container article.main section.featured-image q.caption {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 5%;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
   pointer-events: none;
 }
 body section.container article.main section.featured-image span.attribution {
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   opacity: 0;
   position: absolute;
   bottom: 3px;
@@ -403,7 +510,7 @@ body footer {
   width: 100%;
 }
 body footer section.wrapper {
-  background: #572b85;
+  background: #2e2e2e;
   padding: 50px 0;
 }
 /* ==========================================================================
@@ -411,27 +518,24 @@ body footer section.wrapper {
    ========================================================================== */
 @media screen and (max-width: 1000px) {
   body header.site-head {
-    padding: 0;
+    padding: 20px 0;
   }
   body footer {
-    padding: 50px 20px;
+    padding: 40px 0;
   }
 }
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 38px;
-    font-size: 2.5rem;
+    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: 300;
-  }
-  body header.site-head {
-    padding: 0;
   }
   body section.container {
     background: #572b85;
   }
   body section.container article.main section.featured-image q.caption {
     font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
   body footer {
     padding: 50px 20px;
@@ -439,16 +543,13 @@ body footer section.wrapper {
 }
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 300;
-  }
-  body header.site-head {
-    padding: 0;
   }
   body article.main section.featured-image q.caption {
     font-size: 16px !important;
-    font-size: 1rem !important;
+    font-size: 1.6rem;
   }
   body footer {
     padding: 50px 20px;

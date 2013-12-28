@@ -9,7 +9,7 @@
         <title>Ahoy</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="style.css">
         <script defer src="js/jquery-1.10.2.min.js"></script>
         <script defer src="js/ahoy.js"></script>
@@ -19,31 +19,51 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-		<header class="site-head">
-			<section class="wrapper">
-				<span class="site-title">Ahoy</span>
-			</section><!-- .wrapper -->
-		</header>
-		<section class="container wrapper">
-			<article class="main">
-                <section id="featured-content" class="featured-image">
-                    <a href="http://www.flickr.com/photos/gustavlindqvist/8700164588/" target="_blank"><img height="382px" id="featured-image" src="http://img.gustavlindqvist.se/20131217103615842.jpeg"></a>
-                    <q id="caption" class="caption">Ett samhälle är inte mer civiliserat än hur man behandlar de mest utsatta</q>
-                    <span class="attribution">photo by <a href="http://www.flickr.com/photos/gustavlindqvist/8700164588/">Gustav Lindqvist</a></span>
-                </section>
-                <section class="content">
-                    <h1>Lycka blir verklig av att delas</h1>
-                    <h2>Detta är en H2</h2>
-                    <h3>Detta är en H3</h3>
-                    <h4>Detta är en H4</h4>
-                    <h5>Detta är en H5</h5>
-                </section>
-			</article>
-		</section><!-- .container .wrapper -->
-		<footer id="site-footer">
-			<section class="wrapper">
-				<span class="footer">Detta är en sidfot</span>
-			</section><!-- .wrapper -->
-		</footer>
-    </body>
+    <header class="site-head">
+        <section id="header-wrapper" class="wrapper">
+            <div id="site-title" class="site-title">
+                <a href="#home">
+                    <span class="logo">
+                        <svg version="1.1" class="flag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 11.26 8" xml:space="preserve">
+                            <path transform="scale(0.070)" fill="#572D86" d="M139.851,0h49.887v79.926C369.91,42.572,729.184,40.605,731.079,352.065
+ c1.341,219.864-388.26,186.412-501.262,257.694C107,687.234,162.169,851.006,162.169,851.006s-74.312-153.548-22.318-253.603
+   V117.149c-21.352-1.375-39.25,0.063-50.428,3.322c-3.182-6.907,16.423-17.677,50.428-28.033V0L139.851,0z M189.737,124.715v419.172
+ c52.78-35.798,143.355-79.08,160.861-161.938C385.758,215.487,279.873,146.379,189.737,124.715z"/>
+                        </svg>
+                    </span>
+                    <span id="site-name" class="site-name">Jönköpingspiraterna</span>
+                </a>
+            </div>
+            <nav id="site-navigation" class="site-navigation">
+                <a id="site-menu-button" class="menu-button hidden" href="">Menu</a>
+                <ul id="site-menu-navigation" class="nav-menu">
+                    <li><a href="#menu">About</a></li>
+                    <li><a href="#menu">Blog</a></li>
+                    <li><a href="#menu">Contact</a></li>
+                </ul>
+            </nav>
+        </section><!-- .wrapper -->
+    </header>
+    <section class="container wrapper">
+        <article class="main">
+            <section id="featured-content" class="featured-image">
+                <a href="http://www.flickr.com/photos/gustavlindqvist/8700164588/" target="_blank"><img height="382px" id="featured-image" src="http://img.gustavlindqvist.se/20131217103615842.jpeg"></a>
+                <q id="caption" class="caption">Ett samhälle är inte mer civiliserat än hur man behandlar de mest utsatta</q>
+                <span class="attribution">photo by <a href="http://www.flickr.com/photos/gustavlindqvist/8700164588/">Gustav Lindqvist</a></span>
+            </section>
+            <section class="content">
+                <h1>Lycka blir verklig av att delas</h1>
+                <h2>Detta är en H2</h2>
+                <h3>Detta är en H3</h3>
+                <h4>Detta är en H4</h4>
+                <h5>Detta är en H5</h5>
+            </section>
+        </article>
+    </section><!-- .container .wrapper -->
+    <footer id="site-footer">
+        <section class="wrapper">
+            <span class="footer">Detta är en sidfot</span>
+        </section><!-- .wrapper -->
+    </footer>
+</body>
 </html>
