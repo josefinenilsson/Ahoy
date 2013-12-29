@@ -4,7 +4,7 @@ Theme URI: 	https://github.com/Jonkopingspiraterna/Ahoy
 Author: Gustav Lindqvist
 Author URI: http://gustavlindqvist.se
 Description: A simplistic WordPress theme designed for and by Piratepartists
-Version: 1.0
+Version: 0.1
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 Tags: purple, white, one-column, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, microformats, post-formats
@@ -43,7 +43,7 @@ h5 {
   font-weight: 600;
 }
 a {
-  color: #660ac7;
+  color: #b583e9;
   text-decoration: none;
   font-weight: 500;
 }
