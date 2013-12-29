@@ -9,36 +9,76 @@
         <title>Ahoy</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="style.css">
-
+        <script defer src="js/jquery-1.10.2.min.js"></script>
         <script defer src="js/ahoy.js"></script>
+        
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-		<header class="site-head">
-			<section class="wrapper">
-				<span class="site-title">Ahoy</span>
-			</section><!-- .wrapper -->
-		</header>
-		<section class="container wrapper">
-			<article class="post">
-                <section class="featured-image">
-                    <a href="<?php the_permalink(); ?>"><img src="http://img.gustavlindqvist.se/20131217103615842.jpeg"></a>
-                    <q class="caption">Ett samhälle är inte mer civiliserat än hur man behandlar de mest utsatta</q>
-                    <span class="attribution">photo by <a href="http://www.flickr.com/photos/gustavlindqvist/8700164588/">Gustav Lindqvist</a></span>
-                </section>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <a href="http://johnsplace.com" rel="author"><?php the_author(); ?></a>
-                <time><?php the_time("Y-m-d H:i"); ?></time>
-            </article>
-		</section><!-- #container .wrapper -->
-		<footer id="site-footer">
-			<section class="wrapper">
-				<span class="footer">Detta är en sidfot</span>
-			</section><!-- .wrapper -->
-		</footer>
-    </body>
+    <header class="site-head">
+        <section id="header-wrapper" class="wrapper">
+            <div id="site-title" class="site-title">
+                <a href="#home">
+                    <span class="logo">
+                        <svg version="1.1" class="flag" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewbox="0 0 60 60" enable-background="new 0 0 11.26 8" xml:space="preserve">
+                            <path transform="scale(0.070)" fill="#572D86" d="M139.851,0h49.887v79.926C369.91,42.572,729.184,40.605,731.079,352.065
+ c1.341,219.864-388.26,186.412-501.262,257.694C107,687.234,162.169,851.006,162.169,851.006s-74.312-153.548-22.318-253.603
+   V117.149c-21.352-1.375-39.25,0.063-50.428,3.322c-3.182-6.907,16.423-17.677,50.428-28.033V0L139.851,0z M189.737,124.715v419.172
+ c52.78-35.798,143.355-79.08,160.861-161.938C385.758,215.487,279.873,146.379,189.737,124.715z"/>
+                        </svg>
+                    </span>
+                    <span id="site-name" class="site-name">Ahoy</span>
+                </a>
+            </div>
+            <nav id="site-navigation" class="site-navigation">
+                <a id="site-menu-button" class="menu-button hidden" href="">Menu</a>
+                <ul id="site-menu-navigation" class="nav-menu">
+                    <li><a href="#menu">About</a></li>
+                    <li><a href="#menu">Blog</a></li>
+                    <li><a href="#menu">Contact</a></li>
+                </ul>
+            </nav>
+        </section><!-- .wrapper -->
+    </header>
+    <section class="index container wrapper">
+        <article class="post">
+            <h2><a href="#">Titel</a></h2>
+            <p class="excerpt">Walk the plank bring a spring upon her cable Jack Ketch hail-shot gally bilge sutler come about careen clap of thunder lateen sail Chain Shot ho galleon broadside.</p>
+            <a href="#author" rel="author">Gustav Lindqvist</a>
+            <time>2013-12-29T17:11</time>
+        </article>
+        <article class="post">
+            <h2><a href="#">Titel</a></h2>
+            <p class="excerpt">Privateer grog blossom league bucko red ensign stern barkadeer lad lugsail sutler dead men tell no tales six pounders. </p>
+            <a href="#author" rel="author">Gustav Lindqvist</a>
+            <time>2013-12-29T17:11</time>
+        </article>
+        <div class="pagination">
+            <ul>
+                <li class="number"><a href="#">1</a></li>
+                <li class="number current"><a>2</a></li>
+                <li class="number"><a href="#">3</a></li>
+                <li class="number"><a href="#">4</a></li>
+            </ul>
+        </div>
+    </section><!-- #container .wrapper -->
+    <footer id="site-footer">
+        <section class="wrapper">
+            <aside class="widget">
+                <h3 class="widget-title">Contact</h3>
+                <p>E-Mail: gustav.lindqvist@piratpartiet.se</p>
+                <p>Twitter: @lindqvistgustav</p>
+                <p>Website: gustavlindqvist.se</p></aside><aside id="recent-posts-2" class="widget widget_recent_entries">
+                <h3 class="widget-title">Recent Posts</h3>		<ul>
+				<li><a href="http://word.aniboom.com/?p=32468033" title="Adaptation – An Aniboom Animation by the talented Petya Zlateva">Adaptation – An Aniboom Animation by the talented Petya Zlateva</a></li>
+				<li><a href="http://word.aniboom.com/?p=32468035" title="Have you seen this impressing animation? Can you do better?">Have you seen this impressing animation? Can you do better?</a></li>
+				</ul>
+		</aside>
+        </section><!-- .wrapper -->
+    </footer>
+</body>
 </html>

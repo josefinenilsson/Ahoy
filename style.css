@@ -4,7 +4,7 @@ Theme URI: 	https://github.com/Jonkopingspiraterna/Ahoy
 Author: Gustav Lindqvist
 Author URI: http://gustavlindqvist.se
 Description: A simplistic WordPress theme designed for and by Piratepartists
-Version: 0.1
+Version: 1.0
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 Tags: purple, white, one-column, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, microformats, post-formats
@@ -491,8 +491,10 @@ body header.site-head section.wrapper nav.site-navigation ul li a:hover {
   background: #572b85;
 }
 body section.container {
-  background: white;
   position: relative;
+}
+body section.container article.main {
+  background: white;
 }
 body section.container article.main section {
   background: #572b85;
@@ -589,10 +591,9 @@ body section.container article.main section.content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 50px;
-  padding: 5rem;
 }
 body section.container article.main section.content h1:first-child {
-  margin-top: 0;
+  margin: 0 0 50px 0;
   text-align: center;
 }
 body section.container article.main section.content img {
@@ -646,6 +647,189 @@ body section.container article.main section.comments div.toggle-comments span {
   width: 100%;
   text-align: center;
 }
+body section.container article.main section.comments ol.commentlist {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-indent: 0;
+}
+body section.container article.post,
+body section.container article.quote,
+body section.container article.link,
+body section.container article.video {
+  margin-bottom: 30px;
+  background: white;
+  padding: 30px;
+}
+body section.container article.post h2,
+body section.container article.quote h2,
+body section.container article.link h2,
+body section.container article.video h2 {
+  margin: 0 0 20px 0;
+}
+body section.container article.post:last-child,
+body section.container article.quote:last-child,
+body section.container article.link:last-child,
+body section.container article.video:last-child {
+  margin-bottom: 0;
+}
+body section.container article.post section.featured-image,
+body section.container article.quote section.featured-image,
+body section.container article.link section.featured-image,
+body section.container article.video section.featured-image {
+  background: #572b85;
+  position: relative;
+}
+body section.container article.post section.featured-image img,
+body section.container article.quote section.featured-image img,
+body section.container article.link section.featured-image img,
+body section.container article.video section.featured-image img {
+  display: block;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+  opacity: 0.3;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+body section.container article.post section.featured-image q.caption,
+body section.container article.quote section.featured-image q.caption,
+body section.container article.link section.featured-image q.caption,
+body section.container article.video section.featured-image q.caption {
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  max-width: 100%;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5%;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+body section.container article.post section.featured-image span.attribution,
+body section.container article.quote section.featured-image span.attribution,
+body section.container article.link section.featured-image span.attribution,
+body section.container article.video section.featured-image span.attribution {
+  font-size: 12px;
+  font-size: 1.2rem;
+  opacity: 0;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  padding: 5px;
+  background: white;
+}
+body section.container article.post section.featured-video .youtube,
+body section.container article.quote section.featured-video .youtube,
+body section.container article.link section.featured-video .youtube,
+body section.container article.video section.featured-video .youtube,
+body section.container article.post section.featured-video .vimeo,
+body section.container article.quote section.featured-video .vimeo,
+body section.container article.link section.featured-video .vimeo,
+body section.container article.video section.featured-video .vimeo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+}
+body section.container article.post section.featured-video .youtube iframe,
+body section.container article.quote section.featured-video .youtube iframe,
+body section.container article.link section.featured-video .youtube iframe,
+body section.container article.video section.featured-video .youtube iframe,
+body section.container article.post section.featured-video .vimeo iframe,
+body section.container article.quote section.featured-video .vimeo iframe,
+body section.container article.link section.featured-video .vimeo iframe,
+body section.container article.video section.featured-video .vimeo iframe,
+body section.container article.post section.featured-video .youtube object,
+body section.container article.quote section.featured-video .youtube object,
+body section.container article.link section.featured-video .youtube object,
+body section.container article.video section.featured-video .youtube object,
+body section.container article.post section.featured-video .vimeo object,
+body section.container article.quote section.featured-video .vimeo object,
+body section.container article.link section.featured-video .vimeo object,
+body section.container article.video section.featured-video .vimeo object,
+body section.container article.post section.featured-video .youtube embed,
+body section.container article.quote section.featured-video .youtube embed,
+body section.container article.link section.featured-video .youtube embed,
+body section.container article.video section.featured-video .youtube embed,
+body section.container article.post section.featured-video .vimeo embed,
+body section.container article.quote section.featured-video .vimeo embed,
+body section.container article.link section.featured-video .vimeo embed,
+body section.container article.video section.featured-video .vimeo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body section.container div.pagination {
+  text-align: right;
+}
+body section.container div.pagination ul {
+  display: inline-block;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+body section.container div.pagination ul li.number {
+  display: inline-block;
+}
+body section.container div.pagination ul li.number a {
+  display: block;
+  text-align: center;
+  background: #2e2e2e;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+body section.container div.pagination ul li.number a:hover {
+  text-decoration: none;
+  background: #572b85;
+}
+body section.container div.pagination ul li.number.prev {
+  float: left;
+}
+body section.container div.pagination ul li.number.next {
+  float: right;
+}
+body section.container div.pagination ul li.number.current a {
+  cursor: default;
+  color: #383838;
+}
+body section.container div.pagination ul li.number.current a:hover {
+  text-decoration: none;
+  background: #2e2e2e;
+}
 body footer {
   display: block;
   margin: 30px 0;
@@ -654,7 +838,6 @@ body footer {
 body footer section.wrapper {
   display: block;
   padding: 30px;
-  padding: 3em;
   background: #2e2e2e;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -699,9 +882,12 @@ body footer section.wrapper aside.widget:last-child {
   body header.site-head section.wrapper div.site-title a span.site-name {
     display: none;
   }
-  body section.container article.main section.featured-image q.caption {
-    font-size: 24px;
-    font-size: 2.4rem;
+  body q.caption {
+    font-size: 24px !important;
+    font-size: 2.4rem !important;
+  }
+  body section.container article.main section.content {
+    padding: 30px;
   }
   body footer section.wrapper aside.widget {
     color: white;
@@ -728,9 +914,9 @@ body footer section.wrapper aside.widget:last-child {
     font-size: 3.6rem;
     font-weight: 300;
   }
-  body article.main section.featured-image q.caption {
+  body q.caption {
     font-size: 16px !important;
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 /* ==========================================================================
