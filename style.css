@@ -172,6 +172,29 @@ dl dd {
     margin-bottom: 20px;
   }
 }
+table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+table thead tr th {
+  border-bottom: 3px solid #572b85;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+table tr th {
+  font-weight: 600;
+  padding: 5px;
+}
+table tr td {
+  font-weight: 400;
+  padding: 5px;
+}
+table tr:hover {
+  background: #f9f4ff;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -594,7 +617,7 @@ body section.container article.main section.side-bar {
   display: inline-block;
   width: 25%;
   vertical-align: top;
-  margin-top: 50px;
+  margin: 50px 0;
   background: white;
   word-break: break-all;
   font-size: 12px;

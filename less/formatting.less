@@ -153,3 +153,31 @@ dl {
     }
 }
 
+table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    font-size: 14px; font-size: 1.4rem;
+    thead {
+        tr {
+            th {
+                border-bottom: 3px solid @dark-color;
+                font-size: 16px; font-size: 1.6rem;
+            }
+        }
+    }
+    tr {
+        th {
+                font-weight: 600;
+                padding: 5px;
+        }
+        td {
+                font-weight: 400;
+                padding: 5px;
+        }
+        &:hover {
+            background: @light-color;
+        }
+    }
+}
+
