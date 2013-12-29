@@ -125,6 +125,54 @@ section.input-group input:first-child {
   border-bottom: 0;
 }
 /* ==========================================================================
+   Tables and Definition Lists
+   ========================================================================== */
+dl {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-left: 3px solid #BBBBBB;
+  padding: 10px 10px 10px 16px;
+  margin: 0 0 30px;
+  background: #ebebeb;
+  overflow: hidden;
+  width: 100%;
+}
+dl dt {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 30%;
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+dl dt:after {
+  content: ":";
+}
+dl dd {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 70%;
+  margin: 5px 0;
+}
+@media screen and (max-width: 800px) {
+  dl dt {
+    clear: both;
+    width: 100%;
+  }
+  dl dd {
+    width: 100%;
+    clear: both;
+    margin-bottom: 20px;
+  }
+}
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 .wrapper {
@@ -180,6 +228,10 @@ section.input-group input:first-child {
 }
 .clearfix {
   *zoom: 1;
+}
+code {
+  background: #ebebeb;
+  padding: 2px 5px;
 }
 pre .title,
 pre .id,
@@ -489,8 +541,8 @@ body section.container article.main section.content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 30px;
-  padding: 3rem;
+  padding: 50px;
+  padding: 5rem;
 }
 body section.container article.main section.content h1:first-child {
   margin-top: 0;

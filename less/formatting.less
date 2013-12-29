@@ -108,3 +108,48 @@ section.input-group {
         }
     }
 }
+
+/* ==========================================================================
+   Tables and Definition Lists
+   ========================================================================== */
+
+dl {
+    .box-sizing;
+    border-left: 3px solid #BBBBBB;
+    padding: 10px 10px 10px 16px;
+    margin: 0 0 30px;
+    background: @light-color;
+    overflow:hidden;
+    width: 100%;
+    dt {
+        .box-sizing;
+        float: left;
+        width: 30%;
+        margin: 5px 0;
+        text-transform: capitalize;
+        &:after {
+            content: ":";
+        }
+    }
+    dd {
+        .box-sizing;
+        float: left;
+        width: 70%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: @tablet-size){
+    dl {
+        dt {
+            clear: both;
+            width: 100%;
+        }
+        dd {
+            width: 100%;
+            clear: both;
+            margin-bottom: 20px;
+        }
+    }
+}
+
