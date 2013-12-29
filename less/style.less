@@ -120,53 +120,72 @@ body {
     section.container {
         background: @dark-color;
         article.main {
-            section.featured-image {
-                position: relative;
-                img {
-                    display: block;
-                    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-                    filter: gray;
-                    -webkit-filter: grayscale(100%);
-                    opacity: 0.3;
-                    width: 100%;
-                    height: auto;
-                    .transition(0.3s, @ease:ease-out);
-                }    
-                q.caption {
-                    font-size: 32px; font-size: 3.2rem;
-                    font-weight: 700;
-                    color: white;
-                    position: absolute;
-                    text-align: center;
-                    top: 50%;
-                    left: 0;
-                    max-width: 100%;
-                    .box-sizing;
-                    padding: 0 5%;
-                    .opacity-transition(0.3s, @ease:ease-out);
-                    pointer-events: none;
-                }
-                span.attribution {
-                    font-size: 12px; font-size: 1.2rem;
-                    opacity: 0;
-                    position: absolute;
-                    bottom: 3px;
-                    right: 0;
-                    .transition(0.3s, @ease:ease-out);
-                    padding: 5px;
-                    background: white;
-                }
-                &.touched,&:hover {
-                    span.attribution {
-                        opacity: 1;
+            section {
+                &.featured-video {
+                    .youtube, .vimeo {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        padding-top: 0px; height: 0; overflow: hidden;
                     }
+                     
+                    .youtube iframe, .vimeo iframe,
+                    .youtube object, .vimeo object,
+                    .youtube embed,  .vimeo embed{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &.featured-image {
+                    position: relative;
                     img {
-                        filter: none;
-                        -webkit-filter: none;
-                        opacity: 1;
-                    }
+                        display: block;
+                        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                        filter: gray;
+                        -webkit-filter: grayscale(100%);
+                        opacity: 0.3;
+                        width: 100%;
+                        height: auto;
+                        .transition(0.3s, @ease:ease-out);
+                    }    
                     q.caption {
+                        font-size: 32px; font-size: 3.2rem;
+                        font-weight: 700;
+                        color: white;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 0;
+                        max-width: 100%;
+                        .box-sizing;
+                        padding: 0 5%;
+                        .opacity-transition(0.3s, @ease:ease-out);
+                        pointer-events: none;
+                    }
+                    span.attribution {
+                        font-size: 12px; font-size: 1.2rem;
                         opacity: 0;
+                        position: absolute;
+                        bottom: 3px;
+                        right: 0;
+                        .transition(0.3s, @ease:ease-out);
+                        padding: 5px;
+                        background: white;
+                    }
+                    &.touched,&:hover {
+                        span.attribution {
+                            opacity: 1;
+                        }
+                        img {
+                            filter: none;
+                            -webkit-filter: none;
+                            opacity: 1;
+                        }
+                        q.caption {
+                            opacity: 0;
+                        }
                     }
                 }
             }

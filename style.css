@@ -470,6 +470,26 @@ body header.site-head section.wrapper nav.site-navigation ul li a:hover {
 body section.container {
   background: #572b85;
 }
+body section.container article.main section.featured-video .youtube,
+body section.container article.main section.featured-video .vimeo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+}
+body section.container article.main section.featured-video .youtube iframe,
+body section.container article.main section.featured-video .vimeo iframe,
+body section.container article.main section.featured-video .youtube object,
+body section.container article.main section.featured-video .vimeo object,
+body section.container article.main section.featured-video .youtube embed,
+body section.container article.main section.featured-video .vimeo embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 body section.container article.main section.featured-image {
   position: relative;
 }
