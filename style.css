@@ -50,11 +50,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
-p {
+article.main section.content p {
   margin-bottom: 20px;
 }
 blockquote {
-  border-left: 3px solid #ebebeb;
+  border-left: 3px solid #f9f4ff;
   padding: 0 0 0 16px;
   margin: 0 0 30px;
 }
@@ -66,8 +66,8 @@ q {
   font-weight: 500;
 }
 hr {
-  color: #ebebeb;
-  background-color: #ebebeb;
+  color: #f9f4ff;
+  background-color: #f9f4ff;
   height: 3px;
   border: none;
 }
@@ -135,7 +135,7 @@ dl {
   border-left: 3px solid #BBBBBB;
   padding: 10px 10px 10px 16px;
   margin: 0 0 30px;
-  background: #ebebeb;
+  background: #f9f4ff;
   overflow: hidden;
   width: 100%;
 }
@@ -230,7 +230,7 @@ dl dd {
   *zoom: 1;
 }
 code {
-  background: #ebebeb;
+  background: #f9f4ff;
   padding: 2px 5px;
 }
 pre .title,
@@ -468,6 +468,10 @@ body header.site-head section.wrapper nav.site-navigation ul li a:hover {
   background: #572b85;
 }
 body section.container {
+  background: white;
+  position: relative;
+}
+body section.container article.main section {
   background: #572b85;
 }
 body section.container article.main section.featured-video .youtube,
@@ -577,12 +581,40 @@ body section.container article.main section.content p:last-child,
 body section.container article.main section.content blockquote:last-child {
   margin-bottom: 0;
 }
+body section.container article.main section.content.left-side {
+  width: 75%;
+  display: inline-block;
+}
+body section.container article.main section.content.left-side h1:first-child {
+  text-align: left;
+}
+body section.container article.main section.side-bar {
+  box-sizing: border-box;
+  padding-right: 50px;
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  margin-top: 50px;
+  background: white;
+  word-break: break-all;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+body section.container article.main section.side-bar aside.widget {
+  margin-bottom: 20px;
+}
+body section.container article.main section.side-bar aside.widget h3.widget-title {
+  margin: 0;
+}
+body section.container article.main section.side-bar aside.widget:last-child {
+  margin-bottom: 0;
+}
 body section.container article.main section.comments {
   background: white;
 }
 body section.container article.main section.comments div.toggle-comments {
   height: 100px;
-  background: #ebebeb;
+  background: #f9f4ff;
   cursor: pointer;
 }
 body section.container article.main section.comments div.toggle-comments span {
@@ -644,9 +676,6 @@ body footer section.wrapper aside.widget:last-child {
   body header.site-head section.wrapper div.site-title a span.site-name {
     display: none;
   }
-  body section.container {
-    background: #572b85;
-  }
   body section.container article.main section.featured-image q.caption {
     font-size: 24px;
     font-size: 2.4rem;
@@ -693,7 +722,22 @@ body footer section.wrapper aside.widget:last-child {
     text-shadow: none !important;
   }
   header.site-head {
-    display: none;
+    display: none !important;
+  }
+  #featured-content {
+    display: none !important;
+  }
+  section.content {
+    width: 100% !important;
+  }
+  section.comments {
+    display: none !important;
+  }
+  footer {
+    display: none !important;
+  }
+  section.side-bar {
+    display: none !important;
   }
   a,
   a:visited {

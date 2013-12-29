@@ -9,7 +9,7 @@
 @dark-background-color: #2E2E2E;
 @dark-color: #572b85;
 @link-color: #660AC7;
-@light-color: #EBEBEB;
+@light-color: #F9F4FF;
 @site-color: #fff;
 
 html {
@@ -118,9 +118,11 @@ body {
         }
 	}
     section.container {
-        background: @dark-color;
+        background: white;
+        position: relative;
         article.main {
             section {
+                background: @dark-color;
                 &.featured-video {
                     .youtube, .vimeo {
                         position: relative;
@@ -204,6 +206,33 @@ body {
                 }
                 p:last-child, blockquote:last-child {
                     margin-bottom: 0;
+                }
+                &.left-side {
+                    width: 75%;
+                    display: inline-block;
+                     h1:first-child {
+                        text-align: left;
+                    }
+                }
+            }
+            section.side-bar {
+                box-sizing: border-box;
+                padding-right: 50px;
+                display: inline-block;
+                width: 25%;
+                vertical-align: top;
+                margin-top: 50px;
+                background: white;
+                word-break: break-all;
+                font-size: 12px; font-size: 1.2rem;
+                aside.widget {
+                    margin-bottom: 20px;
+                    h3.widget-title {
+                        margin: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
             section.comments {
@@ -289,7 +318,6 @@ body {
             }
         }
         section.container {
-        background: @dark-color;
         article.main {
             section.featured-image {  
                 q.caption {
