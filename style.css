@@ -4,7 +4,7 @@ Theme URI: 	https://github.com/Jonkopingspiraterna/Ahoy
 Author: Gustav Lindqvist
 Author URI: http://gustavlindqvist.se
 Description: A simplistic WordPress theme designed for and by Piratepartists
-Version: 1.0
+Version: 0.1
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 Tags: purple, white, one-column, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, microformats, post-formats
@@ -43,9 +43,9 @@ h5 {
   font-weight: 600;
 }
 a {
-  color: #b583e9;
+  color: #572b85;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
 }
 a:hover {
   text-decoration: underline;
@@ -54,20 +54,20 @@ article.main section.content p {
   margin-bottom: 20px;
 }
 blockquote {
-  border-left: 3px solid #f9f4ff;
+  border-left: 3px solid #ebebeb;
   padding: 0 0 0 16px;
   margin: 0 0 30px;
 }
 q {
-  font-size: 24px;
-  font-size: 1.5rem;
   font-style: italic;
   clear: both;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 25px;
+  font-size: 2.5rem;
 }
 hr {
-  color: #f9f4ff;
-  background-color: #f9f4ff;
+  color: #ebebeb;
+  background-color: #ebebeb;
   height: 3px;
   border: none;
 }
@@ -135,7 +135,7 @@ dl {
   border-left: 3px solid #BBBBBB;
   padding: 10px 10px 10px 16px;
   margin: 0 0 30px;
-  background: #f9f4ff;
+  background: #ebebeb;
   overflow: hidden;
   width: 100%;
 }
@@ -193,7 +193,7 @@ table tr td {
   padding: 5px;
 }
 table tr:hover {
-  background: #f9f4ff;
+  background: #ebebeb;
 }
 /* ==========================================================================
    Helper classes
@@ -253,7 +253,7 @@ table tr:hover {
   *zoom: 1;
 }
 code {
-  background: #f9f4ff;
+  background: #ebebeb;
   padding: 2px 5px;
 }
 pre .title,
@@ -633,25 +633,29 @@ body section.container article.main section.side-bar aside.widget h3.widget-titl
 body section.container article.main section.side-bar aside.widget:last-child {
   margin-bottom: 0;
 }
-body section.container article.main section.comments {
+body section.container article.main section.byline {
   background: white;
 }
-body section.container article.main section.comments div.toggle-comments {
+body section.container article.main section.byline div.toggle-comments {
   height: 100px;
-  background: #f9f4ff;
+  background: #ebebeb;
   cursor: pointer;
 }
-body section.container article.main section.comments div.toggle-comments span {
+body section.container article.main section.byline div.toggle-comments span {
   display: block;
   line-height: 100px;
   width: 100%;
   text-align: center;
 }
-body section.container article.main section.comments ol.commentlist {
+body section.container article.main section.byline ol.commentlist {
   list-style: none;
   margin: 0 0 1em;
   padding: 0;
   text-indent: 0;
+}
+body section.container article.main section.comments {
+  padding: 50px;
+  background: white;
 }
 body section.container article.post,
 body section.container article.quote,
@@ -888,6 +892,14 @@ body footer section.wrapper aside.widget:last-child {
   }
   body section.container article.main section.content {
     padding: 30px;
+  }
+  body section.container article.main section.content h1:first-child {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  body section.container article.main section.comments {
+    padding: 30px;
+    background: white;
   }
   body footer section.wrapper aside.widget {
     color: white;

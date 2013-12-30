@@ -8,8 +8,8 @@
 @background-color: #383838;
 @dark-background-color: #2E2E2E;
 @dark-color: #572b85;
-@link-color: #B583E9;
-@light-color: #F9F4FF;
+@link-color: #572b85;
+@light-color: #EBEBEB;
 @site-color: #fff;
 
 html {
@@ -235,7 +235,7 @@ body {
                     }
                 }
             }
-            section.comments {
+            section.byline {
                 background: white;
                 div.toggle-comments {
                     height: 100px;
@@ -256,6 +256,10 @@ body {
                     text-indent:0;
                 }
 
+            }
+            section.comments {
+                padding: 50px;
+                background: white;
             }
         }
         article.post, article.quote, article.link, article.video {
@@ -432,12 +436,20 @@ body {
             }
         }
         q.caption {
-                        font-size: 24px !important; font-size: 2.4rem !important;
+            font-size: 24px !important; font-size: 2.4rem !important;
         }
         section.container {
             article.main {
                 section.content {
                     padding: 30px;
+                    h1:first-child {
+                        margin: 0 0 30px 0;
+                        text-align: center;
+                    }
+                }
+                section.comments {
+                    padding: 30px;
+                    background: white;
                 }
             }   
         }
