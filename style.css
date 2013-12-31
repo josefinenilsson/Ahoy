@@ -636,18 +636,12 @@ body section.container article.main section.side-bar aside.widget:last-child {
   margin-bottom: 0;
 }
 body section.container article.main section.byline {
-  background: white;
   width: 100%;
-  height: 150px;
-  background: #ebebeb;
-  padding: 50px;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 body section.container article.main section.byline address {
+  background: #ebebeb;
   height: 50px;
+  padding: 50px;
 }
 body section.container article.main section.byline address aside.author {
   width: 30%;
