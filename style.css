@@ -464,6 +464,8 @@ body header.site-head section.wrapper nav.site-navigation ul {
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
+  display: block;
+  margin: 0;
 }
 body header.site-head section.wrapper nav.site-navigation ul li {
   display: inline-block;
@@ -635,17 +637,53 @@ body section.container article.main section.side-bar aside.widget:last-child {
 }
 body section.container article.main section.byline {
   background: white;
-}
-body section.container article.main section.byline div.toggle-comments {
-  height: 100px;
-  background: #ebebeb;
-  cursor: pointer;
-}
-body section.container article.main section.byline div.toggle-comments span {
-  display: block;
-  line-height: 100px;
   width: 100%;
-  text-align: center;
+  height: 150px;
+  background: #ebebeb;
+  padding: 50px;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body section.container article.main section.byline address {
+  height: 50px;
+}
+body section.container article.main section.byline address aside.author {
+  width: 30%;
+}
+body section.container article.main section.byline address aside.author .author-name {
+  float: left;
+  clear: right;
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+body section.container article.main section.byline address aside.author img.author-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: auto;
+  float: left;
+}
+body section.container article.main section.byline address aside.author .author-bio {
+  float: left;
+  clear: right;
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+}
+body section.container article.main section.byline address aside.date {
+  width: 15%;
+}
+body section.container article.main section.byline address aside span.data {
+  text-transform: uppercase;
+  display: block;
+  line-height: 12px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  width: 100%;
 }
 body section.container article.main section.byline ol.commentlist {
   list-style: none;

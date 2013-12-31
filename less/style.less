@@ -92,6 +92,8 @@ body {
                 right: 0;
                 ul {
                     .list-reset;
+                    display: block;
+                    margin: 0;
                     li {
                         display: inline-block;
                         margin: 10px;
@@ -237,17 +239,49 @@ body {
             }
             section.byline {
                 background: white;
-                div.toggle-comments {
-                    height: 100px;
-                    background: @light-color;
-                    cursor: pointer;
-                    span {
-                        display: block;
-                        line-height: 100px;
-                        width: 100%;
-                        text-align: center;
-                        
+                width: 100%;
+                height: 150px;
+                background: @light-color;
+                padding: 50px;
+                .box-sizing;
+                address {
+                    height: 50px;
+                    aside {
+                        &.author {
+                            width: 30%;
+                            .author-name {
+                                float: left;
+                                clear: right;
+                                display: block;
+                                font-size: 14px; font-size: 1.4rem;
+                                line-height: 30px;
+                            }
+                            img.author-avatar {
+                                border-radius: 50%;
+                                width: 50px;
+                                height: auto;
+                                float: left;
+                            }
+                            .author-bio {
+                                float: left;
+                                clear: right;
+                                display: block;
+                                font-size: 14px; font-size: 1.4rem;
+                                line-height: 20px;
+                            }
+                        }
+                        &.date {
+                            width: 15%;
+                        }
+                        span.data {
+                            text-transform: uppercase;
+                            display: block;
+                            line-height: 12px;
+                            font-size: 12px; font-size: 1.2rem;
+                            width: 100%;
+                        }
                     }
+                            
                 }
                 ol.commentlist {
                     list-style:none;
