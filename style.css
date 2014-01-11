@@ -704,7 +704,7 @@ body section.container article.post,
 body section.container article.quote,
 body section.container article.link,
 body section.container article.video {
-  margin-bottom: 2.5%;
+  margin-bottom: 30px;
   background: white;
   padding: 30px;
 }
@@ -915,6 +915,12 @@ body footer section.wrapper aside.widget:last-child {
 @media screen and (max-width: 62.5em) {
   body header.site-head {
     padding: 20px 0;
+  }
+  body article.post,
+  body article.quote,
+  body article.link,
+  body article.video {
+    margin-bottom: 2.5% !important;
   }
   body footer {
     margin: 2.5% 0;
