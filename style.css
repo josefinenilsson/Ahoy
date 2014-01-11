@@ -19,17 +19,17 @@ Text Domain: Ahoy
 }
 h1 {
   font-size: 48px;
-  font-size: 4.8rem;
+  font-size: 3rem;
   font-weight: 300;
 }
 h2 {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 h3 {
   font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 h4 {
@@ -39,7 +39,7 @@ h4 {
 }
 h5 {
   font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 a {
@@ -63,7 +63,7 @@ q {
   clear: both;
   font-weight: 700;
   font-size: 25px;
-  font-size: 2.5rem;
+  font-size: 1.5625rem;
 }
 hr {
   color: #ebebeb;
@@ -161,7 +161,7 @@ dl dd {
   width: 70%;
   margin: 5px 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50em) {
   dl dt {
     clear: both;
     width: 100%;
@@ -177,12 +177,12 @@ table {
   text-align: left;
   border-spacing: 0;
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 table thead tr th {
   border-bottom: 3px solid #572b85;
   font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 table tr th {
   font-weight: 600;
@@ -199,7 +199,7 @@ table tr:hover {
    Helper classes
    ========================================================================== */
 .wrapper {
-  max-width: 1000px;
+  max-width: 62.5em;
   width: 95%;
   margin: 0 auto;
 }
@@ -368,7 +368,6 @@ pre .cdata {
 }
 html {
   font-family: Open Sans, Helvetica, Arial, sans-serif;
-  font-size: 62.5%;
   position: relative;
   overflow-y: scroll;
 }
@@ -380,7 +379,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   background: #383838;
 }
 body header.site-head {
@@ -435,7 +434,7 @@ body header.site-head section.wrapper div.site-title a span.site-name {
   color: white;
   text-transform: uppercase;
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 2rem;
   line-height: 60px;
   padding: 0 10px;
   -webkit-transition: all 0.2s ease-out;
@@ -476,7 +475,7 @@ body header.site-head section.wrapper nav.site-navigation ul li:last-child {
 }
 body header.site-head section.wrapper nav.site-navigation ul li a {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 300;
   line-height: 40px;
   color: white;
@@ -539,7 +538,7 @@ body section.container article.main section.featured-image img {
 }
 body section.container article.main section.featured-image q.caption {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: white;
   position: absolute;
@@ -560,7 +559,7 @@ body section.container article.main section.featured-image q.caption {
 }
 body section.container article.main section.featured-image span.attribution {
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   opacity: 0;
   position: absolute;
   bottom: 3px;
@@ -602,7 +601,7 @@ body section.container article.main section.content header.post-meta h1 {
 }
 body section.container article.main section.content header.post-meta p {
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-weight: 300;
   margin: 0 0 30px 0;
 }
@@ -632,7 +631,7 @@ body section.container article.main section.side-bar {
   background: white;
   word-break: break-all;
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 body section.container article.main section.side-bar aside.widget {
   margin-bottom: 20px;
@@ -648,43 +647,47 @@ body section.container article.main section.byline {
 }
 body section.container article.main section.byline address {
   background: #ebebeb;
-  height: 50px;
   padding: 50px;
+  overflow: auto;
+  font-style: normal;
+}
+body section.container article.main section.byline address aside {
+  float: left;
+  overflow: none;
+  width: 50%;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 body section.container article.main section.byline address aside.author {
-  width: 30%;
+  padding-right: 1em;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 body section.container article.main section.byline address aside.author .author-name {
-  float: left;
-  clear: right;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  line-height: 25px;
   display: block;
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 30px;
 }
 body section.container article.main section.byline address aside.author img.author-avatar {
+  margin-right: 1em;
   border-radius: 50%;
   width: 50px;
   height: auto;
   float: left;
 }
 body section.container article.main section.byline address aside.author .author-bio {
-  float: left;
-  clear: right;
   display: block;
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 20px;
-}
-body section.container article.main section.byline address aside.date {
-  width: 15%;
+  line-height: 25px;
 }
 body section.container article.main section.byline address aside span.data {
   text-transform: uppercase;
   display: block;
-  line-height: 12px;
+  line-height: 25px;
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   width: 100%;
 }
 body section.container article.main section.byline ol.commentlist {
@@ -745,7 +748,7 @@ body section.container article.quote section.featured-image q.caption,
 body section.container article.link section.featured-image q.caption,
 body section.container article.video section.featured-image q.caption {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: white;
   position: absolute;
@@ -769,7 +772,7 @@ body section.container article.quote section.featured-image span.attribution,
 body section.container article.link section.featured-image span.attribution,
 body section.container article.video section.featured-image span.attribution {
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   opacity: 0;
   position: absolute;
   bottom: 3px;
@@ -909,7 +912,7 @@ body footer section.wrapper aside.widget:last-child {
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 62.5em) {
   body header.site-head {
     padding: 20px 0;
   }
@@ -917,10 +920,10 @@ body footer section.wrapper aside.widget:last-child {
     margin: 2.5% 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 50em) {
   h1 {
     font-size: 42px;
-    font-size: 4.2rem;
+    font-size: 2.625rem;
     font-weight: 300;
   }
   body header.site-head section.wrapper div.site-title a span.site-name {
@@ -928,13 +931,33 @@ body footer section.wrapper aside.widget:last-child {
   }
   body q.caption {
     font-size: 24px !important;
-    font-size: 2.4rem !important;
+    font-size: 1.5rem !important;
   }
   body section.container article.main section.content {
     padding: 30px;
   }
   body section.container article.main section.content header.post-meta h1 {
     margin: 0 0 30px 0;
+  }
+  body section.container article.main section.byline {
+    width: 100%;
+  }
+  body section.container article.main section.byline address {
+    background: #ebebeb;
+    overflow: auto;
+    padding: 50px;
+    font-style: normal;
+  }
+  body section.container article.main section.byline address aside {
+    float: left;
+    width: 100%;
+    clear: both;
+  }
+  body section.container article.main section.byline address aside.author {
+    padding-right: 0;
+  }
+  body section.container article.main section.byline address aside.categories {
+    margin-top: 50px;
   }
   body section.container article.main section.comments {
     padding: 30px;
@@ -959,15 +982,15 @@ body footer section.wrapper aside.widget:last-child {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5em) {
   h1 {
     font-size: 36px;
-    font-size: 3.6rem;
+    font-size: 2.25rem;
     font-weight: 300;
   }
   body q.caption {
     font-size: 16px !important;
-    font-size: 1.6rem !important;
+    font-size: 1rem !important;
   }
 }
 /* ==========================================================================
