@@ -1,7 +1,7 @@
 Ahoy
 ====
 
-A simple WordPress theme
+Ghost version of Ahoy.
 
 ## Contributing
 
