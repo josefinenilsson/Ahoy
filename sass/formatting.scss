@@ -1,0 +1,137 @@
+@charset "utf-8";
+body {
+    font-family: $sans-serif;
+}
+
+main {
+    @include font-size(1.6);
+}
+
+p,blockquote,pre,img,q,h2,h3,h4,h5,ul,ol {
+    margin: 1em 0;
+}
+
+h1 {
+    @include font-size(3);
+    font-weight: 300;
+}
+
+h2 {
+    @include font-size(3);
+    font-weight: 300;
+    line-height: 120%;
+}
+
+h3 {
+    @include font-size(2.5);
+    font-weight: 300;
+    line-height: 120%;
+}
+
+h4 {
+    @include font-size(2);
+    font-weight: 300;
+    line-height: 120%;
+}
+
+ul {
+    list-style: square;
+    margin-left: 18px;
+    li {
+        
+    }
+}
+
+ol {
+    list-style:decimal;
+    margin-left: 21px;
+    li {
+        
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: $purple;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+blockquote {
+    border-left: 4px solid $lightgrey;
+    padding-left: 1em;
+    color: $grey;
+    font-family: $serif;
+    font-style: italic;
+    @include font-size(1.6);
+}
+
+q {
+    display: inline-block;
+    color: $grey;
+    @include font-size(2);
+    font-family: $serif;
+    font-style: italic;
+    text-align: center;
+    &::before {
+        content: "\201C";
+    }
+    &::after {
+        content: "\201D";
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+@media screen and (min-width: $mobile-width) {
+    h1 {
+        width: 110%;
+        margin-left: -5%;
+        @include font-size(3.5);
+    }
+    q {
+        width: 110%;
+        margin-left: -5%;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    blockquote {
+        margin-left: -1.25em;
+    }
+    ul, ol {
+        margin-left:0 ;
+    }
+    h1 {
+        width: 120%;
+        margin-left: -10%;
+        @include font-size(4);
+    }
+    q {
+        width: 120%;
+        margin-left: -10%;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    h1 {
+        @include font-size(5);
+    }
+    q {
+        width: 120%;
+        margin-left: -10%;
+    }
+}
+
