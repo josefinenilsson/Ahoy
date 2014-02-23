@@ -336,6 +336,8 @@ main .content {
   width: 100%;
   margin: 0 auto;
   padding: 2em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   main .content p.description {
     font-size: 20px;
@@ -360,7 +362,14 @@ article {
   line-height: 1.5em; }
 
 footer.main-footer {
+  display: flex;
+  height: 10em;
+  color: white;
   background: #383838; }
+  footer.main-footer a {
+    color: white; }
+  footer.main-footer span {
+    margin: auto; }
 
 @media screen and (min-width: 40em) {
   main .banner {

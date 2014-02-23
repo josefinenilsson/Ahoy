@@ -10,7 +10,7 @@ function youtube_shortcode( $atts ) {
 	);
 
 	// Code
-	return '<iframe width="640" height="360" src="//www.youtube.com/embed/'.$id.'?theme=light&color=white&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe>'
+	return '<iframe width="640" height="360" src="//www.youtube.com/embed/'.$id.'?theme=light&color=white&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe>';
 }
 add_shortcode( 'youtube', 'youtube_shortcode' );
 
@@ -133,6 +133,38 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 1,
 	));
+}
+
+// Add function for counting words
+
+function wordCount(){
+    ob_start();
+    the_content();
+    $content = ob_get_clean();
+    return sizeof(explode(" ", $content));
+}
+
+// Add custom title function
+add_filter( 'wp_title', 'rw_title', 10, 3 );
+function rw_title( $title, $sep, $seplocation )
+{
+    global $page, $paged;
+    // Don't affect in feeds.
+    if ( is_feed() )
+        return $title;
+    // Add the blog name
+    if ( 'right' == $seplocation )
+        $title .= get_bloginfo( 'name' );
+    else
+        $title = get_bloginfo( 'name' ) . $title;
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_front_page() ) )
+        $title .= " {$sep} {$site_description}";
+    // Add a page number if necessary:
+    if ( $paged >= 2 || $page >= 2 )
+        $title = sprintf( __( 'Page %s', 'dbt' ), max( $paged, $page ) ) . " {$sep} " . $title;
+    return $title;
 }
 
 ?>
