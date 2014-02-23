@@ -1,18 +1,4 @@
 <?php
-// Add Shortcode
-function youtube_shortcode( $atts ) {
-
-	// Attributes
-	extract( shortcode_atts(
-		array(
-			'id' => 'dQw4w9WgXcQ',
-		), $atts )
-	);
-
-	// Code
-	return '<iframe width="640" height="360" src="//www.youtube.com/embed/'.$id.'?theme=light&color=white&showinfo=0&controls=2" frameborder="0" allowfullscreen></iframe>';
-}
-add_shortcode( 'youtube', 'youtube_shortcode' );
 
 // Add Quicktags
 function youtube() {
@@ -50,6 +36,19 @@ function ahoy_theme_features()  {
 
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'ahoy_theme_features' );
+
+// Register Navigation Menus
+function registerMenu() {
+
+    $locations = array(
+        'site-navigation' => 'Primary site navigation',
+    );
+    register_nav_menus( $locations );
+
+}
+// Hook into the 'init' action
+add_action( 'init', 'registerMenu' );
+
 
 if(function_exists("register_field_group"))
 {

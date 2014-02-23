@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The archive template file
  *
  */
 
@@ -13,8 +13,15 @@ get_header(); ?>
         } ?>
         <section class="banner" style="background-image: url(<?php echo $banner; ?>);">
             <section class="wrapper">
-                <h1 class="heading" title="Buckminster Fuller"></h1>
-                <q class="quote">You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.</q>
+                <h1 class="heading">
+                    <?php
+                    if ( is_day() ) { echo "Dagligt arkiv för " . get_the_date(); }
+                    else if ( is_month() ){ echo "Månatligt arkiv för " . get_the_date('F, Y'); }
+                    else if ( is_year() ){ echo "Årligt arkiv för " . get_the_date('Y'); }
+                    else { echo "Arkiv"; }
+                    ?>
+                </h1>
+                <?php if(is_Category()) { ?><span class="description"><?php echo category_description( $category_id ); ?></span><?php }?>
             </section>
         </section>
         <section class="content">

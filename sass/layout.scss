@@ -1,8 +1,8 @@
 /* Navigation Menu */
 
-ul.menu-items {
+ul.menu {
     margin: 0;
-    li.list-item {
+    li.menu-item {
         position: relative;
         display: inline-block;
         margin-left: 5px;
@@ -29,7 +29,7 @@ ul.menu-items {
                 }
             }
         }
-        &.active {
+        &.current_page_item {
             a {
                 font-weight: bold;
                 color: $purple;

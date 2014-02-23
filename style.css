@@ -171,19 +171,19 @@ em {
     width: 120%;
     margin-left: -10%; } }
 /* Navigation Menu */
-ul.menu-items {
+ul.menu {
   margin: 0; }
-  ul.menu-items li.list-item {
+  ul.menu li.menu-item {
     position: relative;
     display: inline-block;
     margin-left: 5px; }
-    ul.menu-items li.list-item a {
+    ul.menu li.menu-item a {
       display: inline-block;
       padding: 0 0.5em;
       box-sizing: border-box;
       color: #383838;
       font-weight: bold; }
-      ul.menu-items li.list-item a:after {
+      ul.menu li.menu-item a:after {
         background: #572b85;
         content: " ";
         display: block;
@@ -191,17 +191,17 @@ ul.menu-items {
         margin-top: -2px;
         position: relative;
         bottom: 20px; }
-      ul.menu-items li.list-item a:hover {
+      ul.menu li.menu-item a:hover {
         text-decoration: none;
         color: #572b85; }
-        ul.menu-items li.list-item a:hover:after {
+        ul.menu li.menu-item a:hover:after {
           height: 2px; }
-    ul.menu-items li.list-item.active a {
+    ul.menu li.menu-item.current_page_item a {
       font-weight: bold;
       color: #572b85; }
-      ul.menu-items li.list-item.active a:hover {
+      ul.menu li.menu-item.current_page_item a:hover {
         cursor: default; }
-      ul.menu-items li.list-item.active a:after {
+      ul.menu li.menu-item.current_page_item a:after {
         background: #572b85;
         content: " ";
         display: block;
@@ -209,11 +209,11 @@ ul.menu-items {
         margin-top: -2px;
         position: relative;
         bottom: 20px; }
-    ul.menu-items li.list-item:hover ul.sub-menu {
+    ul.menu li.menu-item:hover ul.sub-menu {
       margin-top: 0;
       opacity: 1;
       visibility: visible; }
-    ul.menu-items li.list-item ul.sub-menu {
+    ul.menu li.menu-item ul.sub-menu {
       position: absolute;
       top: 100%;
       left: 50%;
@@ -229,7 +229,7 @@ ul.menu-items {
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       transition: all 0.2s ease-in-out; }
-      ul.menu-items li.list-item ul.sub-menu li.list-item {
+      ul.menu li.menu-item ul.sub-menu li.list-item {
         display: inline-block;
         margin: 0;
         width: 180px; }
@@ -382,6 +382,7 @@ footer.main-footer {
       font-size: 17.5px;
       font-size: 1.75rem; }
   main .content p.description {
+    margin-top: 0;
     display: none; }
   main .content *:nth-child(2) {
     margin-top: 1em; }

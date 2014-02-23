@@ -1,21 +1,25 @@
 <?php
 /**
- * The main template file
+ * The blog template file
  *
  */
 
 get_header(); ?>
     <main>
-        <?php if (has_post_thumbnail()) {
-            $banner = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+        <?php 
+        $home = get_option('page_for_posts');
+        if (has_post_thumbnail($home)) {
+            $banner = wp_get_attachment_url(get_post_thumbnail_id($home));
         } else {
             $banner = get_template_directory_uri().'/img/background.jpg';
         } ?>
         <section class="banner" style="background-image: url(<?php echo $banner; ?>);">
-            <section class="wrapper">
-                <h1 class="heading" title="Buckminster Fuller"></h1>
-                <q class="quote">You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.</q>
-            </section>
+            <section class="wrapper"><?php
+                $subtitle = get_field("sub-title", $home);
+                $description = get_field("description", $home);
+                echo ($subtitle) ? '<h1 class="heading">'.$subtitle.'</h1>': '<h1 class="heading">'.get_the_title().'</h1>' ;
+                echo ($description) ? '<span class="description">'.$description.'</span>': '' ;      
+            ?></section>
         </section>
         <section class="content">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>

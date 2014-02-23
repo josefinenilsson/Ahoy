@@ -17,6 +17,6 @@
 </head>
 <body>
     <header class="main-header">
-        <a href="/" class="site-info"><img class="site-logo" src="<?php bloginfo('template_directory') ?>/img/logo.svg"><span class="site-title"><?php bloginfo('name'); ?></span></a>
-        <?php wp_nav_menu( array( 'menu_class' => 'menu-items', 'depth' => 1 , 'container' => 'nav', 'container_class' => 'primary-menu', 'container_id' => 'site-navigation', 'fallback_cb' => false) ); ?>
+        <a href="/" class="site-info"><img class="site-logo" src="<?php bloginfo('template_directory') ?>/img/logo.png"><span class="site-title"><?php bloginfo('name'); ?></span></a>
+        <?php wp_nav_menu( array( 'menu_class' => 'menu', 'depth' => 1 , 'container' => 'nav', 'container_class' => 'primary-menu', 'container_id' => 'site-navigation', 'fallback_cb' => false) ); ?>
     </header>
