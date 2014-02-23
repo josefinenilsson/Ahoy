@@ -416,10 +416,7 @@ footer.main-footer {
       font-size: 17.5px;
       font-size: 1.75rem; }
   main .content p.description {
-    margin-top: 0;
-    display: none; }
-  main .content *:nth-child(2) {
-    margin-top: 1em; } }
+    display: none; } }
 @media screen and (min-width: 45em) {
   main .banner section.wrapper .description {
     font-size: 20px;
