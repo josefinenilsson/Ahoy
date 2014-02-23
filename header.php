@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/favicon.ico" />
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/responsive-nav.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
+    <script src="<?php bloginfo('template_directory') ?>/js/responsive-nav.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script defer src="<?php bloginfo('template_directory') ?>/js/jquery.fitvids.js"></script>
 </head>

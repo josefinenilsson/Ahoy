@@ -1,0 +1,68 @@
+/*! responsive-nav.js 1.0.25 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse open li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  width: 100%;
+  max-height: 9999px;  
+}
+
+.nav-collapse.opened ul {
+    width: 100%;
+}
+
+.nav-collapse.opened li {
+width: 100% !important;
+}
+
+.nav-collapse.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+    width: 26px;
+    height: 70px;
+    float: right;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    background: #572b85 url("../img/hamburger.gif") no-repeat 50% 50%;
+}
+
+@media screen and (min-width: 30em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
