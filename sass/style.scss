@@ -19,6 +19,23 @@ $serif: Droid Serif, serif;
 
 html {
     font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-orient: vertical;
+           -moz-box-orient: vertical;
+     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100%;
 }
 
 header.main-header {
@@ -54,9 +71,18 @@ header.main-header {
 }
 
 main {
+    -webkit-box-flex: 1;
+        -webkit-flex: 1;
+       -moz-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     .banner {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
-        height: 15em;
+        height: 10em;
         background-position: center;
         background-size: cover;
         font-family: $sans-serif;
@@ -65,21 +91,22 @@ main {
         section.wrapper {
             max-width: 40em;
             margin:auto;
-            padding: 2em;
+            padding: 1em;
+            color: #fff;
             .heading {
-                display: block;
                 color: #fff;
+                display: block;
                 line-height: 2em;
             }
             .description {
-                display: none;
                 color: #fff;
+                display: none;
                 line-height: 1.5em;
                 @include font-size(1.5);
             }
             .quote {
-                display: block;
                 color: #fff;
+                display: block;
                 line-height: 1.5em;
                 @include font-size(1.5);
             }
@@ -92,7 +119,7 @@ main {
         @include box-sizing(border-box);
         p.description {
             @include font-size(2);
-            margin-top: 1em;
+            margin-top: 0;
         }
         * {
             &:nth-child(2) {
@@ -123,6 +150,10 @@ article {
 }
 
 footer.main-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     height: 10em;
     color: $white;

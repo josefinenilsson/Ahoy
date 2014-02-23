@@ -15,15 +15,15 @@ get_header(); ?>
         <section class="banner" style="background-image: url(<?php echo $banner; ?>);">
             <section class="wrapper"><?php               
                 $quote = get_field("quote");
-                echo ($quote) ? '<q class="quote">'.$quote.'</q>': '' ;                 
+                echo ($quote) ? '<q class="quote">'.$quote.'</q>': '<h1 class="heading">'.get_the_title().'</h1><time class="date timesince" data-timesince="'.get_the_time('U').'" datetime="'.get_the_time('c').'">'.get_the_time('F j, Y').'</time>';                 
             ?></section>
         </section>
         <section class="content">
             <article class="main-content">
-                <header class="post-meta">
+                <?php if($quote) { ?><header class="post-meta">
                     <h1 class="post-title"><?php the_title(); ?></h1>
                     <time class="date timesince" data-timesince="<?php the_time('U'); ?>" datetime="<?php the_time('c') ?>"><?php the_time('F j, Y') ?>.</time>
-                </header>
+                </header><?php } ?>
                 <?php the_content(); ?>
             </article>
             <?php endwhile; endif; ?>
