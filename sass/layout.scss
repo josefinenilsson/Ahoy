@@ -1,0 +1,123 @@
+/* Navigation Menu */
+
+ul.menu {
+    margin: 0;
+    li.menu-item {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+        a {
+            display: inline-block;
+            padding: 0 0.5em;
+            box-sizing: border-box;
+            color: $grey;
+            font-weight: bold;
+            &:after {
+                background: $purple;
+                content: " ";
+                display: block;
+                height: 0px;
+                margin-top: -2px;
+                position: relative;
+                bottom: 20px;
+            }
+            &:hover {
+                text-decoration: none;
+                color: $purple;
+                &:after {
+                    height: 2px;
+                }
+            }
+        }
+        &.current_page_item {
+            a {
+                font-weight: bold;
+                color: $purple;
+                &:hover {
+                    cursor: default;
+                }
+                
+                &:after {
+                    background: $purple;
+                    content: " ";
+                    display: block;
+                    height: 2px;
+                    margin-top: -2px;
+                    position: relative;
+                    bottom: 20px;
+                }
+            }
+        }
+        &:hover {
+            ul.sub-menu {
+                margin-top: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        ul.sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 180px;
+            margin: {
+                top: 20px;
+                left: -45px;
+                bottom: 0;
+                right: 0;
+            }
+            opacity: 0;
+            visibility: hidden;
+            background: $grey;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-in-out;
+            li.list-item {
+                display: inline-block;
+                margin: 0;
+                width: 180px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $mobile-width) {
+    h1 {
+        width: 110%;
+        margin-left: -5%;
+        @include font-size(3.5);
+    }
+    q {
+        width: 110%;
+        margin-left: -5%;
+    }
+}
+
+@media screen and (min-width: $tablet-width) {
+    blockquote {
+        margin-left: -1.25em;
+    }
+    ul, ol {
+        margin-left:0 ;
+    }
+    h1 {
+        width: 120%;
+        margin-left: -10%;
+        @include font-size(4);
+    }
+    q {
+        width: 120%;
+        margin-left: -10%;
+    }
+}
+
+@media screen and (min-width: $desktop-width) {
+    h1 {
+        @include font-size(5);
+    }
+    q {
+        width: 120%;
+        margin-left: -10%;
+    }
+}

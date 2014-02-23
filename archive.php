@@ -1,25 +1,28 @@
 <?php
 /**
- * The blog template file
+ * The archive template file
  *
  */
 
 get_header(); ?>
     <main>
-        <?php 
-        $home = get_option('page_for_posts');
-        if (has_post_thumbnail($home)) {
-            $banner = wp_get_attachment_url(get_post_thumbnail_id($home));
+        <?php if (has_post_thumbnail()) {
+            $banner = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
         } else {
             $banner = get_template_directory_uri().'/img/background.jpg';
         } ?>
         <section class="banner" style="background-image: url(<?php echo $banner; ?>);">
-            <section class="wrapper"><?php
-                $subtitle = get_field("sub-title", $home);
-                $description = get_field("description", $home);
-                echo ($subtitle) ? '<h1 class="heading">'.$subtitle.'</h1>': '<h1 class="heading">'.get_the_title().'</h1>' ;
-                echo ($description) ? '<span class="description">'.$description.'</span>': '' ;      
-            ?></section>
+            <section class="wrapper">
+                <h1 class="heading">
+                    <?php
+                    if ( is_day() ) { echo "Dagligt arkiv för " . get_the_date(); }
+                    else if ( is_month() ){ echo "Månatligt arkiv för " . get_the_date('F, Y'); }
+                    else if ( is_year() ){ echo "Årligt arkiv för " . get_the_date('Y'); }
+                    else { echo "Arkiv"; }
+                    ?>
+                </h1>
+                <?php if(is_Category()) { ?><span class="description"><?php echo category_description( $category_id ); ?></span><?php }?>
+            </section>
         </section>
         <section class="content">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
