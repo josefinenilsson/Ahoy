@@ -4,8 +4,8 @@ $purple: #572b85;
 $grey: #383838;
 $lightgrey: #DDD;
 $wrapper-width: 40em;
-$mobile-width: 40em;
-$tablet-width: 50em;
+$mobile-width: 30em;
+$tablet-width: 45em;
 $desktop-width: 80em;
 $sans-serif: Open Sans, Helvetica, sans-serif;
 $serif: Droid Serif, serif;
@@ -189,13 +189,6 @@ footer.main-footer {
                 &:nth-child(2) {
                     margin-top: 1em;
                 }
-            }
-        }
-    }
-    header.main-header {
-        .site-info {
-            span.site-title {
-                display: inline;
             }
         }
     }

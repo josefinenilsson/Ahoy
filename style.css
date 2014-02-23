@@ -139,7 +139,7 @@ strong {
 em {
   font-style: italic; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 30em) {
   h1 {
     width: 110%;
     margin-left: -5%;
@@ -149,7 +149,7 @@ em {
   q {
     width: 110%;
     margin-left: -5%; } }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
   blockquote {
     margin-left: -1.25em; }
 
@@ -237,7 +237,7 @@ ul.menu {
         margin: 0;
         width: 180px; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 30em) {
   h1 {
     width: 110%;
     margin-left: -5%;
@@ -247,7 +247,7 @@ ul.menu {
   q {
     width: 110%;
     margin-left: -5%; } }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45em) {
   blockquote {
     margin-left: -1.25em; }
 
@@ -405,7 +405,7 @@ footer.main-footer {
   footer.main-footer span {
     margin: auto; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 30em) {
   main .banner {
     height: 20em; }
     main .banner section.wrapper .description {
@@ -419,11 +419,8 @@ footer.main-footer {
     margin-top: 0;
     display: none; }
   main .content *:nth-child(2) {
-    margin-top: 1em; }
-
-  header.main-header .site-info span.site-title {
-    display: inline; } }
-@media screen and (min-width: 50em) {
+    margin-top: 1em; } }
+@media screen and (min-width: 45em) {
   main .banner section.wrapper .description {
     font-size: 20px;
     font-size: 2rem; }
